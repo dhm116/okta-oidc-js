@@ -8,7 +8,13 @@ function install (Vue, options) {
     clientId: authConfig.client_id,
     issuer: authConfig.issuer,
     redirectUri: authConfig.redirect_uri,
-    url: authConfig.issuer.split('/oauth2/')[0]
+    url: authConfig.issuer.split('/oauth2/')[0],
+    ajaxRequest: authConfig.ajax_request,
+    authorizeUrl: authConfig.authorize_url,
+    header: authConfig.header,
+    maxClockSkew: authConfig.max_clock_skew,
+    transformErrorXHR: authConfig.transform_error_xhr,
+    userinfoUrl: authConfig.userinfo_url
   })
   oktaAuth.userAgent = `${packageInfo.name}/${packageInfo.version} ${oktaAuth.userAgent}`
 

@@ -20,6 +20,12 @@ export interface OktaConfig {
   clientId?: string;
   scope?: string;
   responseType?: string;
+  ajaxRequest?: string;
+  authorizeUrl?: string;
+  header?: string;
+  maxClockSkew?: string;
+  transformErrorXHR?: string;
+  userinfoUrl?: string;
   onAuthRequired?: AuthRequiredFunction;
 }
 

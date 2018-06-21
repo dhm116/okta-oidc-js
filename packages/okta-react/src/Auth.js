@@ -22,7 +22,13 @@ export default class Auth {
       url: config.issuer.split('/oauth2/')[0],
       clientId: config.client_id,
       issuer: config.issuer,
-      redirectUri: config.redirect_uri
+      ajaxRequest: config.ajax_request,
+      authorizeUrl: config.authorize_url,
+      header: config.header,
+      maxClockSkew: config.max_clock_skew,
+      redirectUri: config.redirect_uri,
+      transformErrorXHR: config.transform_error_xhr,
+      userinfoUrl: config.userinfo_url
     });
     this._oktaAuth.userAgent = `${packageInfo.name}/${packageInfo.version} ${this._oktaAuth.userAgent}`;
     this._config = config;
